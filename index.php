@@ -12,7 +12,7 @@ include 'includes/header.php';
     <div class="container">
         <div class="grid grid-2" style="align-items: center; gap: 4rem;">
             <div class="hero-content animate-on-scroll">
-                <h1 class="mb-lg" style="font-size: 3.6rem;">
+                <h1 class="mb-lg">
                     Автоматизация заказов и <span class="text-accent-2">аналитика</span> для вашего онлайн-бизнеса
                 </h1>
                 <p class="mb-xl" style="font-size: 1.125rem; color: var(--muted);">
@@ -203,6 +203,38 @@ include 'includes/header.php';
     </div>
 </section>
 
+<!-- Brand Narrative -->
+<section class="section">
+    <div class="container">
+        <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+            <div class="animate-on-scroll">
+                <h2 class="mb-lg">Почему Zoravixo — больше, чем платформа</h2>
+                <p style="font-size: 1.125rem; color: var(--muted); max-width: 720px;">
+                    Мы строим экосистему, в которой технологии становятся невидимой опорой бизнеса. Zoravixo объединяет аналитику, автоматизацию и интеграции в один плавный опыт: от умной маршрутизации заказов до прогнозов спроса на основе данных. Наша философия — минимализм интерфейса и максимализм результата. Вы получаете прозрачные метрики, адаптивные процессы и гибкую архитектуру, которая растёт вместе с вами. Мы убираем лишнее, усиливая главное — фокус на прибыль и скорость.
+                </p>
+                <div class="panel" style="margin-top: 1.5rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <svg class="icon text-accent-2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        <strong>Практичность по умолчанию:</strong>
+                    </div>
+                    <p class="mb-0" style="color: var(--muted); margin-top: 0.5rem;">
+                        Подключение за минуты, масштабирование без боли, результат — измеримый и быстрый.
+                    </p>
+                </div>
+            </div>
+            <div class="animate-on-scroll">
+                <div style="position: relative; height: 100%;">
+                    <div style="position: relative; width: 100%; max-width: 560px; margin-left: auto;">
+                        <img src="img/brand-journey-1.webp" alt="Вид дашборда Zoravixo" style="width: 100%; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); display: block;">
+                        <img src="img/brand-journey-2.webp" alt="Связанные интеграции и процессы" style="position: absolute; right: -8%; bottom: -12%; width: 38%; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
 <!-- Metrics -->
 <section class="color-block color-block-4">
     <div class="container">
@@ -215,23 +247,103 @@ include 'includes/header.php';
         
         <div class="grid grid-4">
             <div class="text-center animate-on-scroll">
-                <div style="font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--bg);">500+</div>
+                <div class="metric-num" data-count-to="500" data-suffix="+" data-duration="1200" style="font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--bg);">0</div>
                 <div style="font-size: 1.125rem; color: rgba(15, 16, 32, 0.8);">Активных клиентов</div>
             </div>
             
             <div class="text-center animate-on-scroll">
-                <div style="font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--bg);">40%</div>
+                <div class="metric-num" data-count-to="40" data-suffix="%" data-duration="1200" style="font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--bg);">0</div>
                 <div style="font-size: 1.125rem; color: rgba(15, 16, 32, 0.8);">Рост эффективности</div>
             </div>
             
             <div class="text-center animate-on-scroll">
-                <div style="font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--bg);">25%</div>
+                <div class="metric-num" data-count-to="25" data-suffix="%" data-duration="1200" style="font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--bg);">0</div>
                 <div style="font-size: 1.125rem; color: rgba(15, 16, 32, 0.8);">Увеличение прибыли</div>
             </div>
             
             <div class="text-center animate-on-scroll">
-                <div style="font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--bg);">99.9%</div>
+                <div class="metric-num" data-count-to="99.9" data-suffix="%" data-decimals="1" data-duration="1400" style="font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--bg);">0</div>
                 <div style="font-size: 1.125rem; color: rgba(15, 16, 32, 0.8);">Время работы системы</div>
+            </div>
+        </div>
+        
+        <!-- Calculator -->
+        <div class="panel animate-on-scroll" style="margin-top: var(--space-2xl);">
+            <div class="grid grid-2" style="align-items: start; gap: 2rem;">
+                <div>
+                    <h3 class="mb-md">Калькулятор эффекта для вашего магазина</h3>
+                    <p class="text-muted mb-lg" style="color: rgba(15, 16, 32, 0.8);">Оцените потенциальный рост прибыли и экономию времени с Zoravixo.</p>
+
+                    <form id="calc-form">
+                        <div class="form-group">
+                            <label class="form-label" for="calc-orders">Заказов в месяц</label>
+                            <input id="calc-orders" class="form-input" type="number" inputmode="numeric" min="0" step="1" value="1000" />
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="calc-aov">Средний чек, €</label>
+                            <input id="calc-aov" class="form-input" type="number" inputmode="decimal" min="0" step="1" value="50" />
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="calc-margin">Валовая маржа, %</label>
+                            <input id="calc-margin" class="form-input" type="number" inputmode="decimal" min="0" max="100" step="1" value="30" />
+                        </div>
+
+                        <div class="grid grid-2" style="gap: 1rem;">
+                            <div class="form-group">
+                                <label class="form-label" for="calc-efficiency">Рост эффективности, %</label>
+                                <input id="calc-efficiency" class="form-input" type="number" inputmode="decimal" min="0" max="100" step="1" value="40" />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="calc-profit-uplift">Рост прибыли, %</label>
+                                <input id="calc-profit-uplift" class="form-input" type="number" inputmode="decimal" min="0" max="100" step="1" value="25" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="calc-time">Время на 1 заказ, мин</label>
+                            <input id="calc-time" class="form-input" type="number" inputmode="decimal" min="0" step="1" value="10" />
+                        </div>
+                    </form>
+                </div>
+
+                <div>
+                    <h4 class="mb-md" style="color: var(--bg);">Результаты расчёта</h4>
+                    <div class="grid grid-2" style="gap: 1rem;">
+                        <div class="panel" style="background: rgba(15, 16, 32, 0.1);">
+                            <div style="color: var(--bg); font-weight: 600;">Текущая выручка/мес</div>
+                            <div id="calc-revenue" class="calc-num" data-type="currency" style="font-size: 1.25rem; color: var(--bg);">—</div>
+                        </div>
+                        <div class="panel" style="background: rgba(15, 16, 32, 0.1);">
+                            <div style="color: var(--bg); font-weight: 600;">Текущая прибыль/мес</div>
+                            <div id="calc-profit" class="calc-num" data-type="currency" style="font-size: 1.25rem; color: var(--bg);">—</div>
+                        </div>
+                        <div class="panel" style="background: rgba(15, 16, 32, 0.1);">
+                            <div style="color: var(--bg); font-weight: 600;">Рост прибыли/мес</div>
+                            <div id="calc-profit-increase" class="calc-num" data-type="currency" style="font-size: 1.25rem; color: var(--bg);">—</div>
+                        </div>
+                        <div class="panel" style="background: rgba(15, 16, 32, 0.1);">
+                            <div style="color: var(--bg); font-weight: 600;">Новая прибыль/мес</div>
+                            <div id="calc-profit-new" class="calc-num" data-type="currency" style="font-size: 1.25rem; color: var(--bg);">—</div>
+                        </div>
+                    </div>
+
+                    <div class="panel" style="margin-top: 1rem; background: rgba(33, 158, 188, 0.1); border-color: var(--c2);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--bg);">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M3 3v18h18M8 17l4-4 4 4 6-6"/></svg>
+                            <strong>Экономия времени</strong>
+                        </div>
+                        <div id="calc-hours-saved" class="calc-num" data-type="hours" style="margin-top: 0.5rem; color: rgba(15, 16, 32, 0.8);">—</div>
+                    </div>
+
+                    <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="/contacts.php" class="btn btn-primary">Получить расчёт для моего бизнеса
+                            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+                        </a>
+                        <button type="button" id="calc-reset" class="btn btn-ghost">Сбросить</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

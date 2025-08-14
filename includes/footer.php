@@ -56,7 +56,7 @@
                 <div class="footer-section">
                     <h4>Начать работу</h4>
                     <p>Готовы улучшить свой бизнес? Свяжитесь с нами для бесплатной консультации.</p>
-                    <a href="/contacts.php" class="btn btn-primary mt-sm">Связаться</a>
+                    <a href="/contacts.php" class="btn btn-primary mt-sm" style="color: var(--fg);">Связаться</a>
                 </div>
             </div>
             

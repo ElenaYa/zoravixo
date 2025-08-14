@@ -113,7 +113,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
                 <li><a href="/about.php" class="nav-link <?= $current_page === 'about' ? 'active' : '' ?>">О нас</a></li>
                 <li><a href="/services.php" class="nav-link <?= $current_page === 'services' ? 'active' : '' ?>">Услуги</a></li>
                 <li><a href="/contacts.php" class="nav-link <?= $current_page === 'contacts' ? 'active' : '' ?>">Контакты</a></li>
-                <li><a href="#" class="btn btn-primary">Начать</a></li>
+                <li><a href="/services.php#pricing" class="btn btn-primary">Начать</a></li>
             </ul>
             
             <button class="nav-toggle" id="navToggle" aria-label="Открыть меню навигации">

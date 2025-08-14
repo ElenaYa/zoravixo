@@ -9,19 +9,24 @@
         const nav = document.getElementById('navbar');
         
         if (navToggle && navMenu) {
+            // Initialize ARIA state
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.setAttribute('aria-controls', 'navMenu');
+
             navToggle.addEventListener('click', function() {
                 navMenu.classList.toggle('active');
-                
+
                 // Update aria-expanded
                 const isExpanded = navMenu.classList.contains('active');
-                navToggle.setAttribute('aria-expanded', isExpanded);
-                
+                navToggle.setAttribute('aria-expanded', String(isExpanded));
+
+                // Lock/unlock body scroll
+                document.body.classList.toggle('menu-open', isExpanded);
+
                 // Update icon
                 const icon = navToggle.querySelector('svg path');
-                if (isExpanded) {
-                    icon.setAttribute('d', 'M18 6L6 18M6 6l12 12');
-                } else {
-                    icon.setAttribute('d', 'M3 12h18M3 6h18M3 18h18');
+                if (icon) {
+                    icon.setAttribute('d', isExpanded ? 'M18 6L6 18M6 6l12 12' : 'M3 12h18M3 6h18M3 18h18');
                 }
             });
             
@@ -30,7 +35,9 @@
                 if (!nav.contains(e.target) && navMenu.classList.contains('active')) {
                     navMenu.classList.remove('active');
                     navToggle.setAttribute('aria-expanded', 'false');
-                    navToggle.querySelector('svg path').setAttribute('d', 'M3 12h18M3 6h18M3 18h18');
+                    document.body.classList.remove('menu-open');
+                    const iconPath = navToggle.querySelector('svg path');
+                    if (iconPath) iconPath.setAttribute('d', 'M3 12h18M3 6h18M3 18h18');
                 }
             });
             
@@ -39,7 +46,31 @@
                 if (e.key === 'Escape' && navMenu.classList.contains('active')) {
                     navMenu.classList.remove('active');
                     navToggle.setAttribute('aria-expanded', 'false');
+                    document.body.classList.remove('menu-open');
                     navToggle.focus();
+                }
+            });
+
+            // Close on nav-link click (for single-page anchors)
+            navMenu.addEventListener('click', function(e) {
+                const target = e.target;
+                if (target && target.closest('a')) {
+                    navMenu.classList.remove('active');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                    document.body.classList.remove('menu-open');
+                    const iconPath = navToggle.querySelector('svg path');
+                    if (iconPath) iconPath.setAttribute('d', 'M3 12h18M3 6h18M3 18h18');
+                }
+            });
+
+            // Reset on resize to desktop
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                    document.body.classList.remove('menu-open');
+                    const iconPath = navToggle.querySelector('svg path');
+                    if (iconPath) iconPath.setAttribute('d', 'M3 12h18M3 6h18M3 18h18');
                 }
             });
         }
@@ -75,6 +106,14 @@
             entries.forEach(function(entry) {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animated');
+
+                    // Trigger count-up for metrics
+                    const nums = entry.target.querySelectorAll('.metric-num');
+                    if (nums && nums.length) {
+                        nums.forEach(function(el){
+                            startCountUp(el);
+                        });
+                    }
                 }
             });
         }, observerOptions);
@@ -84,6 +123,31 @@
         animatedElements.forEach(function(el) {
             observer.observe(el);
         });
+    }
+
+    // Count-up utility
+    function startCountUp(element) {
+        if (element.dataset.counted === 'true') return;
+        const target = parseFloat(element.getAttribute('data-count-to') || '0');
+        const duration = parseInt(element.getAttribute('data-duration') || '1000', 10);
+        const suffix = element.getAttribute('data-suffix') || '';
+        const decimals = parseInt(element.getAttribute('data-decimals') || '0', 10);
+        const startTime = performance.now();
+
+        function easeOutQuad(t){ return t*(2-t); }
+
+        function frame(now){
+            const progress = Math.min(1, (now - startTime) / duration);
+            const eased = easeOutQuad(progress);
+            const value = target * eased;
+            element.textContent = value.toFixed(decimals) + suffix;
+            if (progress < 1) {
+                requestAnimationFrame(frame);
+            } else {
+                element.dataset.counted = 'true';
+            }
+        }
+        requestAnimationFrame(frame);
     }
 
     // Form validation
@@ -382,9 +446,141 @@
                 const rect = element.getBoundingClientRect();
                 if (rect.top < window.innerHeight && rect.bottom > 0) {
                     element.classList.add('animated');
+
+                    // Count-up for metrics on load if visible
+                    const nums = element.querySelectorAll('.metric-num');
+                    if (nums && nums.length) {
+                        nums.forEach(function(el){
+                            startCountUp(el);
+                        });
+                    }
                 }
             });
         });
+    }
+
+    // Calculator logic
+    function initCalculator() {
+        const form = document.getElementById('calc-form');
+        if (!form) return;
+
+        const ordersEl = document.getElementById('calc-orders');
+        const aovEl = document.getElementById('calc-aov');
+        const marginEl = document.getElementById('calc-margin');
+        const efficiencyEl = document.getElementById('calc-efficiency');
+        const profitUpliftEl = document.getElementById('calc-profit-uplift');
+        const timeEl = document.getElementById('calc-time');
+
+        const revenueOut = document.getElementById('calc-revenue');
+        const profitOut = document.getElementById('calc-profit');
+        const profitIncOut = document.getElementById('calc-profit-increase');
+        const profitNewOut = document.getElementById('calc-profit-new');
+        const hoursOut = document.getElementById('calc-hours-saved');
+        const resetBtn = document.getElementById('calc-reset');
+
+        function toNumber(el){
+            const v = parseFloat((el && el.value) || '0');
+            return isNaN(v) ? 0 : v;
+        }
+
+        function formatCurrency(num){
+            return new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(num);
+        }
+
+        function animateText(el, from, to, formatter, duration){
+            const start = performance.now();
+            function frame(now){
+                const p = Math.min(1, (now - start) / duration);
+                const eased = p*(2-p);
+                const val = from + (to - from) * eased;
+                el.textContent = formatter(val);
+                if (p < 1) requestAnimationFrame(frame);
+            }
+            requestAnimationFrame(frame);
+        }
+
+        function recalc(){
+            const orders = toNumber(ordersEl);
+            const aov = toNumber(aovEl);
+            const marginPct = toNumber(marginEl) / 100;
+            const effPct = toNumber(efficiencyEl) / 100;
+            const profitUpliftPct = toNumber(profitUpliftEl) / 100;
+            const minutesPerOrder = toNumber(timeEl);
+
+            const revenue = orders * aov;
+            const profit = revenue * marginPct;
+            const profitIncrease = profit * profitUpliftPct;
+            const profitNew = profit + profitIncrease;
+            const hoursSaved = (orders * minutesPerOrder * effPct) / 60;
+
+            const currentRevenue = parseFloat(revenueOut.dataset.value || '0');
+            const currentProfit = parseFloat(profitOut.dataset.value || '0');
+            const currentProfitInc = parseFloat(profitIncOut.dataset.value || '0');
+            const currentProfitNew = parseFloat(profitNewOut.dataset.value || '0');
+            const currentHours = parseFloat(hoursOut.dataset.value || '0');
+
+            revenueOut.dataset.value = String(revenue);
+            profitOut.dataset.value = String(profit);
+            profitIncOut.dataset.value = String(profitIncrease);
+            profitNewOut.dataset.value = String(profitNew);
+            hoursOut.dataset.value = String(hoursSaved);
+
+            animateText(revenueOut, currentRevenue, revenue, v => formatCurrency(v), 600);
+            animateText(profitOut, currentProfit, profit, v => formatCurrency(v), 600);
+            animateText(profitIncOut, currentProfitInc, profitIncrease, v => formatCurrency(v), 600);
+            animateText(profitNewOut, currentProfitNew, profitNew, v => formatCurrency(v), 600);
+            animateText(hoursOut, currentHours, hoursSaved, v => `${v.toFixed(1)} ч/мес`, 600);
+        }
+
+        // Initialize outputs
+        revenueOut.textContent = '—';
+        profitOut.textContent = '—';
+        profitIncOut.textContent = '—';
+        profitNewOut.textContent = '—';
+        hoursOut.textContent = '—';
+
+        // Recalculate on input
+        [ordersEl, aovEl, marginEl, efficiencyEl, profitUpliftEl, timeEl].forEach(function(input){
+            input.addEventListener('input', recalc);
+            input.addEventListener('change', recalc);
+        });
+
+        // Reset button
+        if (resetBtn) {
+            resetBtn.addEventListener('click', function(){
+                ordersEl.value = '1000';
+                aovEl.value = '50';
+                marginEl.value = '30';
+                efficiencyEl.value = '40';
+                profitUpliftEl.value = '25';
+                timeEl.value = '10';
+                revenueOut.dataset.value = '0';
+                profitOut.dataset.value = '0';
+                profitIncOut.dataset.value = '0';
+                profitNewOut.dataset.value = '0';
+                hoursOut.dataset.value = '0';
+                recalc();
+            });
+        }
+
+        // Lazy initialize when panel becomes visible
+        const panel = document.getElementById('calc-form');
+        if (panel) {
+            const rect = panel.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                recalc();
+            } else {
+                const io = new IntersectionObserver(function(entries){
+                    entries.forEach(function(entry){
+                        if (entry.isIntersecting) {
+                            recalc();
+                            io.disconnect();
+                        }
+                    });
+                }, { threshold: 0.1 });
+                io.observe(panel);
+            }
+        }
     }
 
     // Initialize all functionality
@@ -398,6 +594,7 @@
         initParallax();
         initPanelEffects();
         initLoadingAnimation();
+        initCalculator();
     }
 
     // Wait for DOM to be ready

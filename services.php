@@ -254,7 +254,7 @@ include 'includes/header.php';
 </section>
 
 <!-- Pricing Plans -->
-<section class="section">
+<section id="pricing" class="section">
     <div class="container">
         <div class="text-center mb-2xl animate-on-scroll">
             <h2 class="mb-lg">Тарифные планы</h2>
