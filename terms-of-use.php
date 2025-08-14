@@ -6,7 +6,6 @@ $page_keywords = "условия использования, пользоват�
 include 'includes/header.php';
 ?>
 
-<!-- Hero Section -->
 <section class="section-hero section-hero--compact">
     <div class="hero-bg"></div>
     <div class="container">
@@ -26,11 +25,9 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Terms Content -->
 <section class="section">
     <div class="container">
         <div class="grid grid-4" style="align-items: start; gap: 2rem;">
-            <!-- Navigation -->
             <div class="animate-on-scroll">
                 <div class="panel" style="position: sticky; top: 100px;">
                     <h4 class="mb-lg">Содержание</h4>
@@ -51,10 +48,8 @@ include 'includes/header.php';
                 </div>
             </div>
             
-            <!-- Main Content -->
             <div style="grid-column: span 3;">
                 <div class="animate-on-scroll">
-                    <!-- Acceptance -->
                     <section id="acceptance" class="mb-2xl">
                         <h2 class="mb-lg">1. Принятие условий</h2>
                         <div class="panel">
@@ -74,7 +69,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Service Description -->
                     <section id="description" class="mb-2xl">
                         <h2 class="mb-lg">2. Описание сервиса</h2>
                         <div class="panel">
@@ -115,7 +109,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- User Accounts -->
                     <section id="user-accounts" class="mb-2xl">
                         <h2 class="mb-lg">3. Учетные записи пользователей</h2>
                         <div class="panel">
@@ -145,7 +138,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Acceptable Use -->
                     <section id="acceptable-use" class="mb-2xl">
                         <h2 class="mb-lg">4. Допустимое использование</h2>
                         <div class="panel">
@@ -179,7 +171,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Payment -->
                     <section id="payment" class="mb-2xl">
                         <h2 class="mb-lg">5. Оплата и тарифы</h2>
                         <div class="panel">
@@ -220,7 +211,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Intellectual Property -->
                     <section id="intellectual-property" class="mb-2xl">
                         <h2 class="mb-lg">6. Интеллектуальная собственность</h2>
                         <div class="panel">
@@ -250,7 +240,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Liability -->
                     <section id="liability" class="mb-2xl">
                         <h2 class="mb-lg">7. Ограничение ответственности</h2>
                         <div class="panel">
@@ -280,7 +269,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Termination -->
                     <section id="termination" class="mb-2xl">
                         <h2 class="mb-lg">8. Прекращение использования</h2>
                         <div class="panel">
@@ -316,7 +304,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Changes -->
                     <section id="changes" class="mb-2xl">
                         <h2 class="mb-lg">9. Изменения условий</h2>
                         <div class="panel">
@@ -337,7 +324,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Governing Law -->
                     <section id="governing-law" class="mb-2xl">
                         <h2 class="mb-lg">10. Применимое право и разрешение споров</h2>
                         <div class="panel">
