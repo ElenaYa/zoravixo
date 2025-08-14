@@ -6,7 +6,6 @@ $page_keywords = "политика конфиденциальности, защ�
 include 'includes/header.php';
 ?>
 
-<!-- Hero Section -->
 <section class="section-hero section-hero--compact">
     <div class="hero-bg"></div>
     <div class="container">
@@ -26,11 +25,9 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Policy Content -->
 <section class="section">
     <div class="container">
         <div class="grid grid-4" style="align-items: start; gap: 2rem;">
-            <!-- Navigation -->
             <div class="animate-on-scroll">
                 <div class="panel" style="position: sticky; top: 100px;">
                     <h4 class="mb-lg">Содержание</h4>
@@ -49,10 +46,8 @@ include 'includes/header.php';
                 </div>
             </div>
             
-            <!-- Main Content -->
             <div style="grid-column: span 3;">
                 <div class="animate-on-scroll">
-                    <!-- Introduction -->
                     <section id="introduction" class="mb-2xl">
                         <h2 class="mb-lg">1. Введение</h2>
                         <div class="panel">
@@ -73,7 +68,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Data Collection -->
                     <section id="data-collection" class="mb-2xl">
                         <h2 class="mb-lg">2. Какие данные мы собираем</h2>
                         <div class="panel">
@@ -114,7 +108,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Data Usage -->
                     <section id="data-usage" class="mb-2xl">
                         <h2 class="mb-lg">3. Как мы используем ваши данные</h2>
                         <div class="panel">
@@ -159,7 +152,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Data Sharing -->
                     <section id="data-sharing" class="mb-2xl">
                         <h2 class="mb-lg">4. Передача данных третьим лицам</h2>
                         <div class="panel">
@@ -191,7 +183,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Data Security -->
                     <section id="data-security" class="mb-2xl">
                         <h2 class="mb-lg">5. Безопасность данных</h2>
                         <div class="panel">
@@ -223,7 +214,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- User Rights -->
                     <section id="user-rights" class="mb-2xl">
                         <h2 class="mb-lg">6. Ваши права</h2>
                         <div class="panel">
@@ -271,7 +261,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Cookies -->
                     <section id="cookies" class="mb-2xl">
                         <h2 class="mb-lg">7. Файлы cookie</h2>
                         <div class="panel">
@@ -290,7 +279,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Contact -->
                     <section id="contact" class="mb-2xl">
                         <h2 class="mb-lg">8. Контактная информация</h2>
                         <div class="panel panel-accent-1">

@@ -6,7 +6,6 @@ $page_keywords = "автоматизация заказов, аналитика 
 include 'includes/header.php';
 ?>
 
-<!-- Hero Section -->
 <section class="section-hero">
     <div class="hero-bg"></div>
     <div class="container">
@@ -33,7 +32,6 @@ include 'includes/header.php';
             <div class="animate-on-scroll" style="position: relative;">
                 <img src="img/hero.webp" alt="Дашборд Zoravixo" style="width: 100%; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);">
                 
-                <!-- Floating metrics cards -->
                 <div class="panel" style="position: absolute; top: 20px; right: 20px; padding: 1rem; background: rgba(255, 183, 3, 0.95); color: var(--bg); min-width: 120px;">
                     <div style="font-size: 1.5rem; font-weight: 700;">+40%</div>
                     <div style="font-size: 0.875rem;">Эффективность</div>
@@ -48,7 +46,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Features Section -->
 <section id="features" class="section">
     <div class="container">
         <div class="text-center mb-2xl animate-on-scroll">
@@ -114,7 +111,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- How it works -->
 <section class="color-block color-block-2">
     <div class="container">
         <div class="text-center mb-2xl animate-on-scroll">
@@ -152,7 +148,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Integrations -->
 <section class="section">
     <div class="container">
         <div class="text-center mb-2xl animate-on-scroll">
@@ -203,7 +198,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Brand Narrative -->
 <section class="section">
     <div class="container">
         <div class="grid grid-2" style="align-items: center; gap: 4rem;">
@@ -235,7 +229,6 @@ include 'includes/header.php';
     
 </section>
 
-<!-- Metrics -->
 <section class="color-block color-block-4">
     <div class="container">
         <div class="text-center mb-2xl animate-on-scroll">
@@ -267,7 +260,6 @@ include 'includes/header.php';
             </div>
         </div>
         
-        <!-- Calculator -->
         <div class="panel animate-on-scroll" style="margin-top: var(--space-2xl);">
             <div class="grid grid-2" style="align-items: start; gap: 2rem;">
                 <div>
@@ -349,7 +341,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- CTA Section -->
 <section class="section">
     <div class="container">
         <div class="panel" style="text-align: center; background: linear-gradient(135deg, var(--c3), rgba(142, 50, 255, 0.8)); color: var(--bg); padding: 4rem 2rem;">

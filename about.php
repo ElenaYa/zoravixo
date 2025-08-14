@@ -6,7 +6,6 @@ $page_keywords = "о компании zoravixo, команда, миссия, а
 include 'includes/header.php';
 ?>
 
-<!-- Hero Section -->
 <section class="section-hero section-hero--compact">
     <div class="hero-bg"></div>
     <div class="container">
@@ -23,7 +22,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Mission Section -->
 <section class="section" style="padding-top: 0;">
     <div class="container">
         <div class="grid grid-2" style="align-items: center; gap: 4rem;">
@@ -64,7 +62,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Values Section -->
 <section class="color-block color-block-1">
     <div class="container">
         <div class="text-center mb-2xl animate-on-scroll">
@@ -115,7 +112,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Team Section -->
 <section class="section">
     <div class="container">
         <div class="text-center mb-2xl animate-on-scroll">
@@ -156,7 +152,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Technology Section -->
 <section class="color-block color-block-3">
     <div class="container">
         <div class="grid grid-2" style="align-items: center; gap: 4rem;">
@@ -207,7 +202,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Growth Section -->
 <section class="section">
     <div class="container">
         <div class="text-center mb-2xl animate-on-scroll">
@@ -253,7 +247,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- CTA Section -->
 <section class="color-block color-block-2">
     <div class="container">
         <div class="text-center animate-on-scroll">

@@ -6,7 +6,6 @@ $page_keywords = "GDPR, DPA, защита данных, персональные
 include 'includes/header.php';
 ?>
 
-<!-- Hero Section -->
 <section class="section-hero section-hero--compact">
     <div class="hero-bg"></div>
     <div class="container">
@@ -26,11 +25,9 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- GDPR Content -->
 <section class="section">
     <div class="container">
         <div class="grid grid-4" style="align-items: start; gap: 2rem;">
-            <!-- Navigation -->
             <div class="animate-on-scroll">
                 <div class="panel" style="position: sticky; top: 100px;">
                     <h4 class="mb-lg">Содержание</h4>
@@ -50,10 +47,8 @@ include 'includes/header.php';
                 </div>
             </div>
             
-            <!-- Main Content -->
             <div style="grid-column: span 3;">
                 <div class="animate-on-scroll">
-                    <!-- Our Commitment -->
                     <section id="our-commitment" class="mb-2xl">
                         <h2 class="mb-lg">1. Наши обязательства по GDPR</h2>
                         <div class="panel">
@@ -101,7 +96,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Data Controller -->
                     <section id="data-controller" class="mb-2xl">
                         <h2 class="mb-lg">2. Контролер данных</h2>
                         <div class="panel">
@@ -148,7 +142,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Your Rights -->
                     <section id="your-rights" class="mb-2xl">
                         <h2 class="mb-lg">3. Ваши права как субъекта данных</h2>
                         <div class="panel">
@@ -247,7 +240,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Legal Basis -->
                     <section id="legal-basis" class="mb-2xl">
                         <h2 class="mb-lg">4. Правовые основания обработки</h2>
                         <div class="panel">
@@ -347,7 +339,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Data Protection -->
                     <section id="data-protection" class="mb-2xl">
                         <h2 class="mb-lg">5. Защита данных по дизайну и по умолчанию</h2>
                         <div class="panel">
@@ -422,7 +413,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Data Transfers -->
                     <section id="data-transfers" class="mb-2xl">
                         <h2 class="mb-lg">6. Международные передачи данных</h2>
                         <div class="panel">
@@ -502,7 +492,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Breach Response -->
                     <section id="breach-response" class="mb-2xl">
                         <h2 class="mb-lg">7. Реагирование на нарушения защиты данных</h2>
                         <div class="panel">
@@ -562,7 +551,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Compliance -->
                     <section id="compliance" class="mb-2xl">
                         <h2 class="mb-lg">8. Соответствие и сертификации</h2>
                         <div class="panel">
@@ -634,7 +622,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- DPO Contact -->
                     <section id="dpo-contact" class="mb-2xl">
                         <h2 class="mb-lg">9. Контакты по вопросам защиты данных</h2>
                         <div class="panel panel-accent-4">

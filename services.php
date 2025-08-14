@@ -6,7 +6,6 @@ $page_keywords = "услуги zoravixo, автоматизация заказо
 include 'includes/header.php';
 ?>
 
-<!-- Hero Section -->
 <section class="section-hero section-hero--compact">
     <div class="hero-bg"></div>
     <div class="container">
@@ -29,7 +28,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Services Overview -->
 <section id="services" class="section">
     <div class="container">
         <div class="text-center mb-2xl animate-on-scroll">
@@ -40,7 +38,6 @@ include 'includes/header.php';
         </div>
         
         <div class="grid grid-2 services-overview-grid">
-            <!-- Order Automation -->
             <div class="panel panel-accent-1 animate-on-scroll">
                 <div class="mb-lg">
                     <svg class="icon icon-lg text-accent-1" viewBox="0 0 24 24">
@@ -66,7 +63,6 @@ include 'includes/header.php';
                 </div>
             </div>
             
-            <!-- Analytics -->
             <div class="panel panel-accent-2 animate-on-scroll">
                 <div class="mb-lg">
                     <svg class="icon icon-lg text-accent-2" viewBox="0 0 24 24">
@@ -92,7 +88,6 @@ include 'includes/header.php';
                 </div>
             </div>
 
-            <!-- Integrations & APIs -->
             <div class="panel panel-accent-3 animate-on-scroll">
                 <div class="mb-lg">
                     <svg class="icon icon-lg text-accent-3" viewBox="0 0 24 24">
@@ -114,7 +109,6 @@ include 'includes/header.php';
                 </div>
             </div>
 
-            <!-- Reporting & Monitoring -->
             <div class="panel panel-accent-4 animate-on-scroll">
                 <div class="mb-lg">
                     <svg class="icon icon-lg text-accent-4" viewBox="0 0 24 24">
@@ -141,7 +135,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Integration Services -->
 <section class="color-block color-block-4">
     <div class="container">
         <div class="grid grid-2" style="align-items: center; gap: 4rem;">
@@ -180,7 +173,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Consulting Services -->
 <section class="section">
     <div class="container">
         <div class="text-center mb-2xl animate-on-scroll">
@@ -249,7 +241,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- What We Seek -->
 <section class="color-block color-block-1">
     <div class="container">
         <div class="text-center mb-2xl animate-on-scroll">
@@ -300,7 +291,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Pricing Plans -->
 <section id="pricing" class="section">
     <div class="container">
         <div class="text-center mb-2xl animate-on-scroll">
@@ -311,7 +301,6 @@ include 'includes/header.php';
         </div>
         
         <div class="grid grid-3">
-            <!-- Starter Plan -->
             <div class="panel animate-on-scroll">
                 <div class="text-center mb-lg">
                     <h3 class="text-accent-2 mb-sm">Starter</h3>
@@ -349,7 +338,6 @@ include 'includes/header.php';
                 <a href="/contacts.php" class="btn btn-secondary" style="width: 100%; justify-content: center;">Выбрать план</a>
             </div>
             
-            <!-- Professional Plan -->
             <div class="panel panel-accent-3 animate-on-scroll" style="position: relative;">
                 <div style="position: absolute; top: -10px; right: 20px; background: var(--c3); color: var(--bg); padding: 0.25rem 1rem; border-radius: var(--radius); font-size: 0.875rem; font-weight: 600;">
                     Популярный
@@ -397,7 +385,6 @@ include 'includes/header.php';
                 <a href="/contacts.php" class="btn btn-primary" style="width: 100%; justify-content: center;">Выбрать план</a>
             </div>
             
-            <!-- Enterprise Plan -->
             <div class="panel animate-on-scroll">
                 <div class="text-center mb-lg">
                     <h3 class="text-accent-1 mb-sm">Enterprise</h3>
@@ -444,7 +431,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- CTA Section -->
 <section class="color-block color-block-3">
     <div class="container">
         <div class="text-center animate-on-scroll">

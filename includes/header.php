@@ -27,7 +27,6 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
     <meta name="keywords" content="автоматизация заказов, аналитика онлайн-бизнеса, e-commerce решения, управление заказами, бизнес-аналитика">
     <?php endif; ?>
     
-    <!-- Open Graph -->
     <meta property="og:title" content="<?= isset($page_title) ? htmlspecialchars($page_title) . ' | Zoravixo' : 'Zoravixo - Автоматизация заказов и аналитика для онлайн-бизнеса' ?>">
     <meta property="og:description" content="<?= isset($page_description) ? htmlspecialchars($page_description) : 'Современная платформа автоматизации заказов и продвинутой аналитики для онлайн-бизнеса.' ?>">
     <meta property="og:type" content="website">
@@ -36,30 +35,24 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
     <meta property="og:site_name" content="Zoravixo">
     <meta property="og:locale" content="ru_RU">
     
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?= isset($page_title) ? htmlspecialchars($page_title) . ' | Zoravixo' : 'Zoravixo - Автоматизация заказов и аналитика для онлайн-бизнеса' ?>">
     <meta name="twitter:description" content="<?= isset($page_description) ? htmlspecialchars($page_description) : 'Современная платформа автоматизации заказов и продвинутой аналитики для онлайн-бизнеса.' ?>">
     <meta name="twitter:image" content="https://zoravixo.com/img/og-image.webp">
     
-    <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="icon" href="/img/favicon.png" type="image/png" sizes="any">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     
-    <!-- Preconnects -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="/css/style.css">
     
-    <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -86,7 +79,6 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
     </script>
 </head>
 <body>
-    <!-- Cookie Banner -->
     <div id="cookieBanner" class="cookie-banner">
         <div class="cookie-content">
             <div>
@@ -99,7 +91,6 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
         </div>
     </div>
 
-    <!-- Navigation -->
     <nav class="nav" id="navbar">
         <div class="nav-container">
             <a href="/" class="logo">

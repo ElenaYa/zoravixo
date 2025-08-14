@@ -6,7 +6,6 @@ $page_keywords = "контакты zoravixo, консультация, офис 
 include 'includes/header.php';
 ?>
 
-<!-- Hero Section -->
 <section class="section-hero section-hero--compact">
     <div class="hero-bg"></div>
     <div class="container">
@@ -23,11 +22,9 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Contact Form & Info -->
 <section class="section">
     <div class="container">
         <div class="grid grid-2" style="gap: 4rem; align-items: start;">
-            <!-- Contact Form -->
             <div class="animate-on-scroll">
                 <div class="panel">
                     <h2 class="mb-lg">Отправить сообщение</h2>
@@ -87,7 +84,6 @@ include 'includes/header.php';
                 </div>
             </div>
             
-            <!-- Contact Information -->
             <div class="animate-on-scroll">
                 <div class="panel panel-accent-4 mb-xl">
                     <h3 class="mb-lg">Контактная информация</h3>
@@ -139,7 +135,6 @@ include 'includes/header.php';
                     </div>
                 </div>
                 
-                <!-- Quick Contact Options -->
                 <div class="panel">
                     <h4 class="mb-lg">Быстрая связь</h4>
                     
@@ -165,7 +160,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- FAQ Section -->
 <section class="color-block color-block-2">
     <div class="container">
         <div class="text-center mb-2xl animate-on-scroll">
@@ -225,7 +219,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Office Location -->
 <section class="section">
     <div class="container">
         <div class="grid grid-2" style="gap: 4rem; align-items: center;">
@@ -252,7 +245,6 @@ include 'includes/header.php';
             </div>
             
             <div class="animate-on-scroll">
-                <!-- Map placeholder -->
                 <div style="background: linear-gradient(135deg, var(--c4), rgba(42, 157, 143, 0.8)); border-radius: var(--radius-xl); height: 400px; display: flex; align-items: center; justify-content: center; color: var(--bg); text-align: center; position: relative; overflow: hidden;">
                     <div style="position: relative; z-index: 2;">
                         <svg class="icon icon-lg mb-md" viewBox="0 0 24 24">
@@ -269,7 +261,6 @@ include 'includes/header.php';
                         </a>
                     </div>
                     
-                    <!-- Background pattern -->
                     <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.1; z-index: 1;">
                         <svg width="100%" height="100%" viewBox="0 0 400 400" style="object-fit: cover;">
                             <defs>

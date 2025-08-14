@@ -1,15 +1,12 @@
-/* NeoBau Design System for zoravixo.com */
 :root {
-    /* Colors */
     --bg: #0F1020;
     --fg: #F8FAFC;
     --muted: #A1A1AA;
-    --c1: #FFB703; /* янтарь */
-    --c2: #219EBC; /* океан */
-    --c3: #8E32FF; /* фиолет */
-    --c4: #2A9D8F; /* teal */
+    --c1: #FFB703; 
+    --c2: #219EBC; 
+    --c3: #8E32FF; 
+    --c4: #2A9D8F; 
     
-    /* Spacing */
     --space-xs: 0.5rem;
     --space-sm: 1rem;
     --space-md: 1.5rem;
@@ -18,11 +15,9 @@
     --space-2xl: 4rem;
     --space-3xl: 6rem;
     
-    /* Typography */
     --font-display: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     
-    /* Borders & Shadows */
     --radius: 0.5rem;
     --radius-lg: 1rem;
     --radius-xl: 1.5rem;
@@ -31,13 +26,11 @@
     --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
     
-    /* Layout */
     --container-max: 1280px;
     --grid-cols: 12;
     --nav-height: 80px;
   }
   
-  /* Reset & Base */
   * {
     box-sizing: border-box;
     margin: 0;
@@ -60,12 +53,10 @@
   }
   html, body { overflow-x: hidden; }
   
-  /* Lock scroll when mobile menu is open */
   body.menu-open {
     overflow: hidden;
   }
   
-  /* Typography */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     font-weight: 700;
@@ -99,7 +90,6 @@
     border-radius: 2px;
   }
   
-  /* Layout */
   .container {
     max-width: var(--container-max);
     margin: 0 auto;
@@ -115,7 +105,6 @@
   .grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
   .grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
   
-  /* Geometric Panels */
   .panel {
     background: rgba(248, 250, 252, 0.02);
     border: var(--border-width) solid rgba(248, 250, 252, 0.1);
@@ -153,7 +142,6 @@
   .panel-accent-3 { border-color: var(--c3); }
   .panel-accent-4 { border-color: var(--c4); }
   
-  /* Color Blocks */
   .color-block {
     padding: var(--space-3xl) 0;
     position: relative;
@@ -173,7 +161,6 @@
     color: rgba(15, 16, 32, 0.8);
   }
   
-  /* Navigation */
   .nav {
     position: fixed;
     top: 0;
@@ -212,7 +199,6 @@
     align-items: center;
   }
   
-  /* Hide inline nav items by default on small screens */
   @media (max-width: 1024px) {
     .nav-menu {
       gap: var(--space-md);
@@ -220,7 +206,6 @@
     .nav-menu > li {
       display: block;
     }
-    /* Ensure inline layout is hidden; overlay controls visibility */
     .nav-container .nav-menu:not(.active) {
       display: none;
     }
@@ -249,7 +234,6 @@
     cursor: pointer;
   }
   
-  /* Improve burger visibility on dark background */
   .nav-toggle {
     padding: var(--space-xs);
     border: var(--border-width) solid rgba(248, 250, 252, 0.25);
@@ -282,7 +266,6 @@
     stroke: var(--bg);
   }
   
-  /* Buttons */
   .btn {
     display: inline-flex;
     align-items: center;
@@ -330,7 +313,6 @@
     border-color: rgba(248, 250, 252, 0.3);
   }
   
-  /* Forms */
   .form-group {
     margin-bottom: var(--space-lg);
   }
@@ -374,7 +356,6 @@
     margin-top: var(--space-xs);
   }
   
-  /* Sections */
   .section {
     padding: var(--space-3xl) 0;
   }
@@ -389,7 +370,6 @@
     padding-top: var(--nav-height);
   }
   
-  /* Compact hero for inner pages */
   .section-hero--compact {
     min-height: 60vh;
     align-items: flex-start;
@@ -418,7 +398,6 @@
     z-index: 1;
   }
   
-  /* Footer */
   .footer {
     background: rgba(248, 250, 252, 0.02);
     border-top: var(--border-width) solid rgba(248, 250, 252, 0.1);
@@ -467,7 +446,6 @@
     font-size: 0.875rem;
   }
   
-  /* SVG Icons */
   .icon {
     width: 1.5rem;
     height: 1.5rem;
@@ -484,7 +462,6 @@
     height: 2rem;
   }
   
-  /* Animations */
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -511,7 +488,6 @@
     transform: translateY(0);
   }
 
-  /* Page load reveal */
   body:not(.loaded) .nav,
   body:not(.loaded) #main-content,
   body:not(.loaded) .footer {
@@ -529,7 +505,6 @@
   body.loaded #main-content { transition-delay: 0.1s; }
   body.loaded .footer { transition-delay: 0.2s; }
 
-  /* Respect reduced motion */
   @media (prefers-reduced-motion: reduce) {
     .animate-on-scroll,
     .animate-on-scroll.animated,
@@ -546,7 +521,6 @@
     }
   }
   
-  /* Modal */
   .modal {
     position: fixed;
     top: 0;
@@ -596,7 +570,6 @@
     color: var(--fg);
   }
   
-  /* Cookie Banner */
   .cookie-banner {
     position: fixed;
     bottom: 0;
@@ -636,9 +609,7 @@
     gap: var(--space-sm);
   }
   
-  /* Responsive */
   @media (max-width: 1024px) {
-    /* Tablet and below: overlay menu */
     .nav-menu {
       display: none;
       position: fixed;
@@ -669,7 +640,6 @@
       --space-2xl: 2rem;
     }
     
-    /* Ensure hero content is not hidden behind fixed header on mobile */
     .section-hero {
       padding-top: calc(var(--nav-height) + var(--space-lg));
     }
@@ -720,7 +690,6 @@
       padding: var(--space-lg);
     }
 
-    /* Hero mobile tweaks */
     .section-hero .hero-content h1 {
       font-size: clamp(1.75rem, 7vw, 2.25rem);
       word-break: break-word;
@@ -741,18 +710,15 @@
       grid-template-columns: 2fr 1fr 1fr 1fr;
     }
     
-    /* Desktop spacing for hero heading */
     .section-hero .hero-content h1 {
       margin-top: 3.8rem;
     }
     
-    /* Services overview: 2 cards per row on desktop */
     .services-overview-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
   
-  /* Utility Classes */
   .text-center { text-align: center; }
   .text-left { text-align: left; }
   .text-right { text-align: right; }

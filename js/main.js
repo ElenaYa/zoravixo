@@ -1,36 +1,29 @@
-// Main JavaScript for Zoravixo
 (function() {
     'use strict';
 
-    // Navigation
     function initNavigation() {
         const navToggle = document.getElementById('navToggle');
         const navMenu = document.getElementById('navMenu');
         const nav = document.getElementById('navbar');
         
         if (navToggle && navMenu) {
-            // Initialize ARIA state
             navToggle.setAttribute('aria-expanded', 'false');
             navToggle.setAttribute('aria-controls', 'navMenu');
 
             navToggle.addEventListener('click', function() {
                 navMenu.classList.toggle('active');
 
-                // Update aria-expanded
                 const isExpanded = navMenu.classList.contains('active');
                 navToggle.setAttribute('aria-expanded', String(isExpanded));
 
-                // Lock/unlock body scroll
                 document.body.classList.toggle('menu-open', isExpanded);
 
-                // Update icon
                 const icon = navToggle.querySelector('svg path');
                 if (icon) {
                     icon.setAttribute('d', isExpanded ? 'M18 6L6 18M6 6l12 12' : 'M3 12h18M3 6h18M3 18h18');
                 }
             });
             
-            // Close menu when clicking outside
             document.addEventListener('click', function(e) {
                 if (!nav.contains(e.target) && navMenu.classList.contains('active')) {
                     navMenu.classList.remove('active');
@@ -41,7 +34,6 @@
                 }
             });
             
-            // Close menu when pressing Escape
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape' && navMenu.classList.contains('active')) {
                     navMenu.classList.remove('active');
@@ -51,7 +43,6 @@
                 }
             });
 
-            // Close on nav-link click (for single-page anchors)
             navMenu.addEventListener('click', function(e) {
                 const target = e.target;
                 if (target && target.closest('a')) {
@@ -63,7 +54,6 @@
                 }
             });
 
-            // Reset on resize to desktop
             window.addEventListener('resize', function() {
                 if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
                     navMenu.classList.remove('active');
@@ -75,7 +65,6 @@
             });
         }
         
-        // Navbar scroll effect
         if (nav) {
             let lastScrollY = window.scrollY;
             
@@ -95,7 +84,6 @@
         }
     }
 
-    // Scroll animations
     function initScrollAnimations() {
         const observerOptions = {
             threshold: 0.1,
@@ -107,7 +95,6 @@
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animated');
 
-                    // Trigger count-up for metrics
                     const nums = entry.target.querySelectorAll('.metric-num');
                     if (nums && nums.length) {
                         nums.forEach(function(el){
@@ -118,14 +105,12 @@
             });
         }, observerOptions);
 
-        // Observe elements with animation class
         const animatedElements = document.querySelectorAll('.animate-on-scroll');
         animatedElements.forEach(function(el) {
             observer.observe(el);
         });
     }
 
-    // Count-up utility
     function startCountUp(element) {
         if (element.dataset.counted === 'true') return;
         const target = parseFloat(element.getAttribute('data-count-to') || '0');
@@ -150,7 +135,6 @@
         requestAnimationFrame(frame);
     }
 
-    // Form validation
     function initFormValidation() {
         const forms = document.querySelectorAll('form[data-validate]');
         
@@ -159,14 +143,12 @@
                 e.preventDefault();
                 
                 if (validateForm(form)) {
-                    // Show success message
                     showModal('Спасибо!', 'Ваше сообщение успешно отправлено. Мы свяжемся с вами в ближайшее время.');
                     form.reset();
                     clearFormErrors(form);
                 }
             });
             
-            // Real-time validation
             const inputs = form.querySelectorAll('input, textarea, select');
             inputs.forEach(function(input) {
                 input.addEventListener('blur', function() {
@@ -200,13 +182,11 @@
         let isValid = true;
         let errorMessage = '';
         
-        // Required validation
         if (field.hasAttribute('required') && !value) {
             errorMessage = 'Это поле обязательно для заполнения';
             isValid = false;
         }
         
-        // Email validation
         else if (type === 'email' && value) {
             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailPattern.test(value)) {
@@ -215,7 +195,6 @@
             }
         }
         
-        // Phone validation
         else if (type === 'tel' && value) {
             const phonePattern = /^[\+]?[\d\s\-\(\)]{10,}$/;
             if (!phonePattern.test(value)) {
@@ -224,7 +203,6 @@
             }
         }
         
-        // Name validation
         else if (name === 'name' && value) {
             if (value.length < 2) {
                 errorMessage = 'Имя должно содержать минимум 2 символа';
@@ -232,7 +210,6 @@
             }
         }
         
-        // Message validation
         else if (name === 'message' && value) {
             if (value.length < 10) {
                 errorMessage = 'Сообщение должно содержать минимум 10 символов';
@@ -240,7 +217,6 @@
             }
         }
         
-        // Display error
         if (!isValid) {
             showFieldError(field, errorMessage);
         } else {
@@ -283,9 +259,7 @@
         });
     }
 
-    // Modal functionality
     function initModal() {
-        // Create modal HTML if it doesn't exist
         if (!document.getElementById('modal')) {
             const modalHTML = `
                 <div id="modal" class="modal">
@@ -299,7 +273,6 @@
             document.body.insertAdjacentHTML('beforeend', modalHTML);
         }
         
-        // Close modal on overlay click
         const modal = document.getElementById('modal');
         if (modal) {
             modal.addEventListener('click', function(e) {
@@ -309,7 +282,6 @@
             });
         }
         
-        // Close modal on Escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closeModal();
@@ -327,7 +299,6 @@
             modalBody.innerHTML = content;
             modal.classList.add('active');
             
-            // Focus trap
             const closeButton = modal.querySelector('.modal-close');
             if (closeButton) {
                 closeButton.focus();
@@ -342,16 +313,13 @@
         }
     };
 
-    // Cookie banner
     function initCookieBanner() {
         const cookieBanner = document.getElementById('cookieBanner');
         
         if (cookieBanner) {
-            // Check if user has already made a choice
             const cookieConsent = localStorage.getItem('cookieConsent');
             
             if (!cookieConsent) {
-                // Show banner after a short delay
                 setTimeout(function() {
                     cookieBanner.classList.add('show');
                 }, 2000);
@@ -376,7 +344,6 @@
         }
     }
 
-    // Smooth scrolling for anchor links
     function initSmoothScrolling() {
         const links = document.querySelectorAll('a[href^="#"]');
         
@@ -393,7 +360,7 @@
                 if (target) {
                     e.preventDefault();
                     
-                    const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+                    const offsetTop = target.offsetTop - 80; 
                     
                     window.scrollTo({
                         top: offsetTop,
@@ -404,7 +371,6 @@
         });
     }
 
-    // Parallax effect for hero sections
     function initParallax() {
         const parallaxElements = document.querySelectorAll('.hero-bg');
         
@@ -420,7 +386,6 @@
         }
     }
 
-    // Panel hover effects
     function initPanelEffects() {
         const panels = document.querySelectorAll('.panel');
         
@@ -435,19 +400,16 @@
         });
     }
 
-    // Loading animation
     function initLoadingAnimation() {
         window.addEventListener('load', function() {
             document.body.classList.add('loaded');
             
-            // Trigger animations for visible elements
             const visibleElements = document.querySelectorAll('.animate-on-scroll');
             visibleElements.forEach(function(element) {
                 const rect = element.getBoundingClientRect();
                 if (rect.top < window.innerHeight && rect.bottom > 0) {
                     element.classList.add('animated');
 
-                    // Count-up for metrics on load if visible
                     const nums = element.querySelectorAll('.metric-num');
                     if (nums && nums.length) {
                         nums.forEach(function(el){
@@ -459,7 +421,6 @@
         });
     }
 
-    // Calculator logic
     function initCalculator() {
         const form = document.getElementById('calc-form');
         if (!form) return;
@@ -532,20 +493,17 @@
             animateText(hoursOut, currentHours, hoursSaved, v => `${v.toFixed(1)} ч/мес`, 600);
         }
 
-        // Initialize outputs
         revenueOut.textContent = '—';
         profitOut.textContent = '—';
         profitIncOut.textContent = '—';
         profitNewOut.textContent = '—';
         hoursOut.textContent = '—';
 
-        // Recalculate on input
         [ordersEl, aovEl, marginEl, efficiencyEl, profitUpliftEl, timeEl].forEach(function(input){
             input.addEventListener('input', recalc);
             input.addEventListener('change', recalc);
         });
 
-        // Reset button
         if (resetBtn) {
             resetBtn.addEventListener('click', function(){
                 ordersEl.value = '1000';
@@ -563,7 +521,6 @@
             });
         }
 
-        // Lazy initialize when panel becomes visible
         const panel = document.getElementById('calc-form');
         if (panel) {
             const rect = panel.getBoundingClientRect();
@@ -583,7 +540,6 @@
         }
     }
 
-    // Initialize all functionality
     function init() {
         initNavigation();
         initScrollAnimations();
@@ -597,7 +553,6 @@
         initCalculator();
     }
 
-    // Wait for DOM to be ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {

@@ -6,7 +6,6 @@ $page_keywords = "политика cookie, файлы cookie, настройки
 include 'includes/header.php';
 ?>
 
-<!-- Hero Section -->
 <section class="section-hero section-hero--compact">
     <div class="hero-bg"></div>
     <div class="container">
@@ -26,11 +25,9 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Cookie Content -->
 <section class="section">
     <div class="container">
         <div class="grid grid-4" style="align-items: start; gap: 2rem;">
-            <!-- Navigation -->
             <div class="animate-on-scroll">
                 <div class="panel" style="position: sticky; top: 100px;">
                     <h4 class="mb-lg">Содержание</h4>
@@ -48,10 +45,8 @@ include 'includes/header.php';
                 </div>
             </div>
             
-            <!-- Main Content -->
             <div style="grid-column: span 3;">
                 <div class="animate-on-scroll">
-                    <!-- What are cookies -->
                     <section id="what-are-cookies" class="mb-2xl">
                         <h2 class="mb-lg">1. Что такое файлы cookie</h2>
                         <div class="panel">
@@ -82,7 +77,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- How we use -->
                     <section id="how-we-use" class="mb-2xl">
                         <h2 class="mb-lg">2. Как мы используем cookie</h2>
                         <div class="panel">
@@ -133,7 +127,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Types of cookies -->
                     <section id="types-of-cookies" class="mb-2xl">
                         <h2 class="mb-lg">3. Типы cookie, которые мы используем</h2>
                         <div class="panel">
@@ -237,7 +230,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Third party -->
                     <section id="third-party" class="mb-2xl">
                         <h2 class="mb-lg">4. Сторонние cookie</h2>
                         <div class="panel">
@@ -300,7 +292,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Manage cookies -->
                     <section id="manage-cookies" class="mb-2xl">
                         <h2 class="mb-lg">5. Управление cookie</h2>
                         <div class="panel">
@@ -363,7 +354,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Changes -->
                     <section id="changes" class="mb-2xl">
                         <h2 class="mb-lg">6. Изменения в политике</h2>
                         <div class="panel">
@@ -384,7 +374,6 @@ include 'includes/header.php';
                         </div>
                     </section>
 
-                    <!-- Contact -->
                     <section id="contact" class="mb-2xl">
                         <h2 class="mb-lg">7. Контактная информация</h2>
                         <div class="panel panel-accent-1">
