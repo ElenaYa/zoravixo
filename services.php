@@ -7,8 +7,8 @@ include 'includes/header.php';
 ?>
 
 <!-- Hero Section -->
-<section class="section-hero">
-    <div class="hero-bg" style="background-image: url('img/services-hero.webp');"></div>
+<section class="section-hero section-hero--compact">
+    <div class="hero-bg"></div>
     <div class="container">
         <div class="text-center">
             <div class="hero-content animate-on-scroll">
@@ -34,12 +34,12 @@ include 'includes/header.php';
     <div class="container">
         <div class="text-center mb-2xl animate-on-scroll">
             <h2 class="mb-lg">Что мы предлагаем</h2>
-            <p class="text-muted" style="font-size: 1.125rem; max-width: 600px; margin: 0 auto;">
+            <p class="text-muted" style="font-size: 1.125rem; max-width: 600px; margin: 0 auto; margin-bottom: var(--space-xl);">
                 Полный стек технологий для автоматизации и оптимизации вашего онлайн-бизнеса
             </p>
         </div>
         
-        <div class="grid grid-2">
+        <div class="grid grid-2 services-overview-grid">
             <!-- Order Automation -->
             <div class="panel panel-accent-1 animate-on-scroll">
                 <div class="mb-lg">
@@ -89,6 +89,52 @@ include 'includes/header.php';
                 
                 <div class="panel" style="background: rgba(33, 158, 188, 0.1); border-color: var(--c2);">
                     <strong>Результат:</strong> Увеличение конверсии на 35% и ROI маркетинга на 45%
+                </div>
+            </div>
+
+            <!-- Integrations & APIs -->
+            <div class="panel panel-accent-3 animate-on-scroll">
+                <div class="mb-lg">
+                    <svg class="icon icon-lg text-accent-3" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                    </svg>
+                </div>
+                <h3 class="mb-md">Интеграции и API</h3>
+                <p class="text-muted mb-lg">
+                    Соединяем ваш стек: CMS, CRM, ERP, маркетплейсы и доставку. Открытый API и вебхуки.
+                </p>
+                <ul style="list-style: none; padding: 0; color: var(--muted);">
+                    <li style="margin-bottom: 0.5rem;">✓ Shopify, WooCommerce, Magento, OpenCart</li>
+                    <li style="margin-bottom: 0.5rem;">✓ Salesforce, HubSpot, AmoCRM, Bitrix24</li>
+                    <li style="margin-bottom: 0.5rem;">✓ Вебхуки и SDK для разработчиков</li>
+                </ul>
+                <div class="panel" style="background: rgba(142, 50, 255, 0.1); border-color: var(--c3);">
+                    <strong>Результат:</strong> Бесшовная синхронизация данных и сокращение ручных операций на 70%
+                </div>
+            </div>
+
+            <!-- Reporting & Monitoring -->
+            <div class="panel panel-accent-4 animate-on-scroll">
+                <div class="mb-lg">
+                    <svg class="icon icon-lg text-accent-4" viewBox="0 0 24 24">
+                        <path d="M3 3v18h18"/>
+                        <rect x="7" y="12" width="3" height="6" rx="1"/>
+                        <rect x="12" y="9" width="3" height="9" rx="1"/>
+                        <rect x="17" y="6" width="3" height="12" rx="1"/>
+                    </svg>
+                </div>
+                <h3 class="mb-md">Отчетность и мониторинг</h3>
+                <p class="text-muted mb-lg">
+                    Автоматические отчеты, алерты и мониторинг SLA в реальном времени.
+                </p>
+                <ul style="list-style: none; padding: 0; color: var(--muted);">
+                    <li style="margin-bottom: 0.5rem;">✓ Плановые отчеты на Email/Slack</li>
+                    <li style="margin-bottom: 0.5rem;">✓ Алерты по KPI и инцидентам</li>
+                    <li style="margin-bottom: 0.5rem;">✓ Экспорт в CSV/BI-системы</li>
+                </ul>
+                <div class="panel" style="background: rgba(42, 157, 143, 0.1); border-color: var(--c4);">
+                    <strong>Результат:</strong> Быстрая реакция на отклонения и контроль SLA в реальном времени
                 </div>
             </div>
         </div>
@@ -219,7 +265,7 @@ include 'includes/header.php';
             </div>
             
             <div class="animate-on-scroll">
-                <h3 class="mb-lg">Характеристики наших лучших клиентов:</h3>
+                <h3 class="mb-lg"></h3>
                 
                 <div class="panel mb-lg" style="background: rgba(15, 16, 32, 0.1);">
                     <h4 style="color: var(--bg); margin-bottom: 0.5rem;">Амбициозность</h4>
@@ -248,6 +294,7 @@ include 'includes/header.php';
                         Ориентация на построение долгосрочных отношений и совместный рост.
                     </p>
                 </div>
+               
             </div>
         </div>
     </div>

@@ -5,7 +5,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Zoravixo</h4>
+                    <h4><img src="/img/logo-footer.webp" alt="Zoravixo" style="height: 80px; width: auto; vertical-align: middle;"></h4>
                     <p>Современная платформа автоматизации заказов и продвинутой аналитики для онлайн-бизнеса. Увеличьте эффективность и прибыль с помощью умных решений.</p>
                     
                     <div class="mt-lg">

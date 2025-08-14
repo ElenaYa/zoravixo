@@ -7,8 +7,8 @@ include 'includes/header.php';
 ?>
 
 <!-- Hero Section -->
-<section class="section-hero">
-    <div class="hero-bg" style="background-image: url('img/contacts-hero.webp');"></div>
+<section class="section-hero section-hero--compact">
+    <div class="hero-bg"></div>
     <div class="container">
         <div class="text-center">
             <div class="hero-content animate-on-scroll">

@@ -58,6 +58,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  html, body { overflow-x: hidden; }
   
   /* Lock scroll when mobile menu is open */
   body.menu-open {
@@ -388,6 +389,17 @@
     padding-top: var(--nav-height);
   }
   
+  /* Compact hero for inner pages */
+  .section-hero--compact {
+    min-height: 60vh;
+    align-items: flex-start;
+    padding-top: calc(var(--nav-height) + var(--space-xl));
+    padding-bottom: var(--space-2xl);
+  }
+  .section-hero--compact .hero-content {
+    margin-top: 0;
+  }
+  
   .hero-content {
     position: relative;
     z-index: 2;
@@ -707,6 +719,21 @@
     .panel {
       padding: var(--space-lg);
     }
+
+    /* Hero mobile tweaks */
+    .section-hero .hero-content h1 {
+      font-size: clamp(1.75rem, 7vw, 2.25rem);
+      word-break: break-word;
+      hyphens: auto;
+    }
+    .section-hero .hero-content p {
+      font-size: 1rem;
+    }
+    .section-hero img { max-width: 100%; height: auto; display: block; }
+    .section-hero .animate-on-scroll > .panel {
+      padding: 0.5rem;
+      min-width: 88px;
+    }
   }
   
   @media (min-width: 769px) {
@@ -717,6 +744,11 @@
     /* Desktop spacing for hero heading */
     .section-hero .hero-content h1 {
       margin-top: 3.8rem;
+    }
+    
+    /* Services overview: 2 cards per row on desktop */
+    .services-overview-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
   

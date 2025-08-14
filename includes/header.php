@@ -45,6 +45,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="icon" href="/img/favicon.png" type="image/png" sizes="any">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     
@@ -102,9 +103,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
     <nav class="nav" id="navbar">
         <div class="nav-container">
             <a href="/" class="logo">
-                <svg class="icon" viewBox="0 0 24 24">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                </svg>
+                <img src="/img/logo-zoravix.png" alt="Zoravixo" style="height: 1.5rem; width: auto; display: inline-block;" />
                 Zoravixo
             </a>
             

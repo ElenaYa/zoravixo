@@ -7,7 +7,8 @@ include 'includes/header.php';
 ?>
 
 <!-- Hero Section -->
-<section class="section-hero" style="min-height: 60vh;">
+<section class="section-hero section-hero--compact">
+    <div class="hero-bg"></div>
     <div class="container">
         <div class="text-center">
             <div class="hero-content animate-on-scroll">
