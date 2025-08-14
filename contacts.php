@@ -50,24 +50,6 @@ include 'includes/header.php';
                             <label for="phone" class="form-label">Телефон</label>
                             <input type="tel" id="phone" name="phone" class="form-input" placeholder="+48 123 456 789">
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="company" class="form-label">Компания</label>
-                            <input type="text" id="company" name="company" class="form-input" placeholder="Название компании">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="monthly_orders" class="form-label">Количество заказов в месяц</label>
-                            <select id="monthly_orders" name="monthly_orders" class="form-select">
-                                <option value="">Выберите диапазон</option>
-                                <option value="0-100">0-100 заказов</option>
-                                <option value="100-500">100-500 заказов</option>
-                                <option value="500-1000">500-1000 заказов</option>
-                                <option value="1000-5000">1000-5000 заказов</option>
-                                <option value="5000+">5000+ заказов</option>
-                            </select>
-                        </div>
-                        
                         <div class="form-group">
                             <label for="service_interest" class="form-label">Интересующие услуги</label>
                             <select id="service_interest" name="service_interest" class="form-select">
@@ -120,7 +102,7 @@ include 'includes/header.php';
                             </div>
                             <div>
                                 <h4 class="mb-sm">Офис</h4>
-                                <p class="text-muted mb-0">ul. Prosta 32<br>00-838 Warszawa, Poland</p>
+                                <p class="text-muted mb-0"><a href="https://maps.app.goo.gl/1234567890" target="_blank">ul. Prosta 32<br>00-838 Warszawa, Poland</a></p>
                             </div>
                         </div>
                     </div>
@@ -188,7 +170,7 @@ include 'includes/header.php';
     <div class="container">
         <div class="text-center mb-2xl animate-on-scroll">
             <h2 class="mb-lg">Часто задаваемые вопросы</h2>
-            <p style="font-size: 1.125rem; max-width: 600px; margin: 0 auto;">
+            <p style="font-size: 1.125rem; max-width: 600px; margin: 0 auto var(--space-xl);">
                 Ответы на популярные вопросы о наших услугах
             </p>
         </div>
@@ -279,7 +261,7 @@ include 'includes/header.php';
                         </svg>
                         <h4 class="mb-sm">ul. Prosta 32</h4>
                         <p>00-838 Warszawa, Poland</p>
-                        <a href="https://maps.google.com/?q=ul.+Prosta+32,+00-838+Warszawa,+Poland" target="_blank" rel="noopener" class="btn mt-md" style="background: var(--bg); color: var(--c4);">
+                        <a href="https://maps.app.goo.gl/Gip8Tb7etZzsEoaf9" target="_blank" rel="noopener" class="btn mt-md" style="background: var(--bg); color: var(--c4);">
                             Открыть в картах
                             <svg class="icon icon-sm" viewBox="0 0 24 24">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>

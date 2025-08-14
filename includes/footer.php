@@ -15,7 +15,7 @@
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                                 <circle cx="12" cy="10" r="3"/>
                             </svg>
-                            ul. Prosta 32, 00-838 Warszawa, Poland
+                            <a href="https://maps.app.goo.gl/Gip8Tb7etZzsEoaf9" target="_blank">ul. Prosta 32, 00-838 Warszawa, Poland</a>
                         </p>
                         <p>
                             <svg class="icon icon-sm" style="vertical-align: middle; margin-right: 0.5rem;" viewBox="0 0 24 24">
