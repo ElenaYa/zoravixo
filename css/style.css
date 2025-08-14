@@ -501,6 +501,10 @@
     transform: none;
     transition: opacity 0.5s ease-out, transform 0.6s ease-out;
   }
+  
+  @media (max-width: 768px) {
+    body.loaded #main-content { transition-delay: 0s; }
+  }
   body.loaded .nav { transition-delay: 0s; }
   body.loaded #main-content { transition-delay: 0.1s; }
   body.loaded .footer { transition-delay: 0.2s; }

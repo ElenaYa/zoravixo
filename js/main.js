@@ -85,9 +85,16 @@
     }
 
     function initScrollAnimations() {
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+        if (typeof window.IntersectionObserver !== 'function') {
+            animatedElements.forEach(function(el) { el.classList.add('animated'); });
+            return;
+        }
+
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.08,
+            rootMargin: '0px 0px -10% 0px'
         };
 
         const observer = new IntersectionObserver(function(entries) {
@@ -105,9 +112,17 @@
             });
         }, observerOptions);
 
-        const animatedElements = document.querySelectorAll('.animate-on-scroll');
         animatedElements.forEach(function(el) {
             observer.observe(el);
+        });
+
+        window.addEventListener('load', function() {
+            if (window.innerWidth <= 768) {
+                setTimeout(function() {
+                    document.querySelectorAll('.animate-on-scroll:not(.animated)')
+                        .forEach(function(el) { el.classList.add('animated'); });
+                }, 800);
+            }
         });
     }
 
