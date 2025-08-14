@@ -38,7 +38,7 @@ include 'includes/header.php';
         </div>
         
         <div class="grid grid-2 services-overview-grid">
-            <div class="panel panel-accent-1 animate-on-scroll">
+            <div id="automation" class="panel panel-accent-1 animate-on-scroll">
                 <div class="mb-lg">
                     <svg class="icon icon-lg text-accent-1" viewBox="0 0 24 24">
                         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
@@ -63,7 +63,7 @@ include 'includes/header.php';
                 </div>
             </div>
             
-            <div class="panel panel-accent-2 animate-on-scroll">
+            <div id="analytics" class="panel panel-accent-2 animate-on-scroll">
                 <div class="mb-lg">
                     <svg class="icon icon-lg text-accent-2" viewBox="0 0 24 24">
                         <path d="M3 3v18h18M8 17l4-4 4 4 6-6"/>
@@ -88,7 +88,7 @@ include 'includes/header.php';
                 </div>
             </div>
 
-            <div class="panel panel-accent-3 animate-on-scroll">
+            <div id="integration" class="panel panel-accent-3 animate-on-scroll">
                 <div class="mb-lg">
                     <svg class="icon icon-lg text-accent-3" viewBox="0 0 24 24">
                         <circle cx="12" cy="12" r="3"/>
@@ -109,7 +109,7 @@ include 'includes/header.php';
                 </div>
             </div>
 
-            <div class="panel panel-accent-4 animate-on-scroll">
+            <div id="reporting" class="panel panel-accent-4 animate-on-scroll">
                 <div class="mb-lg">
                     <svg class="icon icon-lg text-accent-4" viewBox="0 0 24 24">
                         <path d="M3 3v18h18"/>

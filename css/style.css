@@ -723,6 +723,11 @@
     }
   }
   
+  /* Anchor targets offset for fixed header */
+  [id] {
+    scroll-margin-top: calc(var(--nav-height) + 16px);
+  }
+  
   .text-center { text-align: center; }
   .text-left { text-align: left; }
   .text-right { text-align: right; }

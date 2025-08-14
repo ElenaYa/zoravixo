@@ -35,10 +35,10 @@
                 <div class="footer-section">
                     <h4>Решения</h4>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.5rem;"><a href="#automation">Автоматизация заказов</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="#analytics">Бизнес-аналитика</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="#integration">Интеграции</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="#reporting">Отчетность</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="/services.php#automation">Автоматизация заказов</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="/services.php#analytics">Бизнес-аналитика</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="/services.php#integration">Интеграции</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="/services.php#reporting">Отчетность</a></li>
                     </ul>
                 </div>
                 
